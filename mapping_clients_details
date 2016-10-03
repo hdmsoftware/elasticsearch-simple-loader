@@ -1,0 +1,27 @@
+{
+ "mappings" : {
+    "clients" : {
+       "dynamic":      "true", 
+           "properties" : {
+            "partner_id" : {"type": "string" },
+            "partner_name" : {"type": "string" },
+            "partner_email": {"type": "string" },
+            "tier" : { "type" : "integer" },
+            "avg_monthly_sales" : { "type" : "integer" },
+            "max_monthly_sales" : { "type" : "integer" },
+            "date_established": {
+                  "type": "date",
+                  "format": "MM/dd/yyyy"
+                },
+                "date_last_order": {
+                  "type": "date",
+                  "format": "MM/dd/yyyy"
+                },
+                "active": {
+                  "type": "string"
+                },    
+            "region" : {"type": "string", "index": "not_analyzed"}
+           }
+    }
+ }
+}
